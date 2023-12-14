@@ -5,7 +5,7 @@
   "main": "bruhh.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node bruhh.js"
+    "start": "node ./src/bruhh.js"
   },
   "keywords": [
     "nodejs"
@@ -13,6 +13,8 @@
   "author": "friday",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "16.0.3",
+    "ejs": "3.1.8",
     "express": "4.18.2"
   }
 }
