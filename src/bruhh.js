@@ -1,19 +1,17 @@
-//#20
+//#30
 const express = require('express')
 const app = express()
 const port = 3000
 const path =require('path')
+const Router= require('./routers/web')
 
-app.set('views', path.join(__dirname,'views'))
-app.set('view engine','ejs')
+const configvieweng=require('./config/viewengine')
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+configvieweng(app)
 
-app.get('/friday', (req, res) => {
-    res.render('vd.ejs')
-  })
+app.use('/',Router)
+
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
