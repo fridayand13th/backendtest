@@ -1,9 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
     <style>
         body {
           margin: 0;
@@ -33,29 +33,38 @@
           background-color: #04AA6D;
           color: white;
         }
-        </style>
+        table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: rgb(99, 110, 231);}
+</style>
 </head>
 
 <body>
-
-    <div>
-        <img class="xinhvl" src="/img/257690256_4232839210154695_1948672509940965762_n.jpg" alt="xinhvl">
-    </div>
+    
     <div class="topnav">
         <a  href="/">Home</a>
-        <a class="active" href="/friday">News</a>
+        <a class="" href="/friday">News</a>
         
       </div>
     <div class="form">
-        <form action="/test" method="post">
+        <form action="/edit-banner" method="post">
             <fieldset>
-                <legend>Test lay thong tin</legend>
+                <legend>Test sua thong tin</legend>
                 <label for="fID">ID</label>
-                <input type="text" name="fID">
+                <input type="text" name="fID" value="<%= banneredit.BannerID %>">
                 <label> Name</label>
-                <input type="text" name="fname" id="">
+                <input type="text" name="fname" value="<%= banneredit.BannerName %>">
                 <label for="">Link anh</label>
-                <input type="text" name="flink" id="">
+                <input type="text" name="flink" value="<%= banneredit.BannerImg %>">
                 <button type="submit">ok</button>
             </fieldset>
         </form>
