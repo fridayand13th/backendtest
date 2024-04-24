@@ -33,6 +33,13 @@
           background-color: #04AA6D;
           color: white;
         }
+        input{
+          margin-bottom: 20px;
+        }
+        img{
+          width: 300px;
+          height: 300px;
+        }
         </style>
 </head>
 
@@ -47,16 +54,16 @@
         
       </div>
     <div class="form">
-        <form action="/test" method="post">
-            <fieldset>
+        <form action="/create-banner" method="post" enctype="multipart/form-data" style="width: min-content; height: max-content;">
+            <fieldset style="width: min-content; height: min-content; display: flex;flex-direction: column;">
                 <legend>Test lay thong tin</legend>
                 <label for="fID">ID</label>
                 <input type="text" name="fID">
                 <label> Name</label>
                 <input type="text" name="fname" id="">
                 <label for="">Link anh</label>
-                <input type="text" name="flink" id="">
-                <button type="submit">ok</button>
+                <input type="file" name="flink" id="">
+                <button type="submit" value="upload">ok</button>
             </fieldset>
         </form>
     </div>

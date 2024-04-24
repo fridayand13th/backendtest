@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Document</title>
 <style>
         body {
@@ -45,6 +46,10 @@ th, td {
 }
 
 tr:hover {background-color: rgb(99, 110, 231);}
+img {
+  width: 30px;
+  height: 30px;
+}
 </style>
 </head>
 <body>
@@ -70,16 +75,21 @@ tr:hover {background-color: rgb(99, 110, 231);}
                     <%= listBanners[i].BannerName  %>
                 </td>
                 <td>
-                    <%= listBanners[i].BannerImg %>
+                  <img src="/img/<%= listBanners[i].BannerImg %>" alt="xinhvl">
                 </td>
                 <td>
                   <button><a href="/update/<%= listBanners[i].BannerID  %>">edit</a></button>
-                  <button><a href="/delete-banner/<%= listBanners[i].BannerID  %>">dele</a></button>
+                  <button><a href="/del-banner/<%= listBanners[i].BannerID  %>">dele</a></button>
                 </td>
               </tr>
 
         <% } %>
 
       </table>
+      <% for( let i=0;i< listBanners.length;i++) {%>
+        
+            <h4><%= Datas[i]  %> </h4>
+      <%}%>
+     
 </body>
 </html>
